@@ -1,0 +1,33 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fx-deals
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5433/fx_deals
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=123
+    depends_on:
+      - db
+    networks:
+      - network-data
+
+  db:
+    image: postgres:alpine
+    ports:
+      - "5433:5433"
+    command: [ "postgres", "-p", "5433" ]
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: prod_db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+
+networks:
+  network-data:
+    driver: bridge
