@@ -1,13 +1,13 @@
-package com.progresoft.progresofttest;
+package com.progressoft.progressofttest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProgresoftTestApplication {
+public class ProgressoftTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProgresoftTestApplication.class, args);
+        SpringApplication.run(ProgressoftTestApplication.class, args);
     }
 
 }

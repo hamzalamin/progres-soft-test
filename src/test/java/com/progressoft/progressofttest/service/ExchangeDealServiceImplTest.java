@@ -1,12 +1,12 @@
-package com.progresoft.progresofttest.service;
+package com.progressoft.progressofttest.service;
 
-import com.progresoft.progresofttest.Exception.DuplicateIdException;
-import com.progresoft.progresofttest.Exception.SameCurrencyException;
-import com.progresoft.progresofttest.dto.ExchangeDealRequestDto;
-import com.progresoft.progresofttest.dto.ExchangeDealResponseDto;
-import com.progresoft.progresofttest.entity.ExchangeDeal;
-import com.progresoft.progresofttest.mapper.ExchangeDealMapper;
-import com.progresoft.progresofttest.repository.ExchangeDealRepository;
+import com.progressoft.progressofttest.Exception.DuplicateIdException;
+import com.progressoft.progressofttest.Exception.SameCurrencyException;
+import com.progressoft.progressofttest.dto.ExchangeDealRequestDto;
+import com.progressoft.progressofttest.dto.ExchangeDealResponseDto;
+import com.progressoft.progressofttest.entity.ExchangeDeal;
+import com.progressoft.progressofttest.mapper.ExchangeDealMapper;
+import com.progressoft.progressofttest.repository.ExchangeDealRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -31,7 +31,7 @@ class ExchangeDealServiceImplTest {
     @Mock
     private ExchangeDealMapper dealMapper;
 
-    private IExchangeDealService sut;
+    private ExchangeDealService sut;
 
     private ExchangeDealRequestDto exchangeDealRequestDto;
     private ExchangeDeal exchangeDeal;

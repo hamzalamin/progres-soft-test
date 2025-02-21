@@ -1,8 +1,8 @@
-package com.progresoft.progresofttest.mapper;
+package com.progressoft.progressofttest.mapper;
 
-import com.progresoft.progresofttest.dto.ExchangeDealRequestDto;
-import com.progresoft.progresofttest.dto.ExchangeDealResponseDto;
-import com.progresoft.progresofttest.entity.ExchangeDeal;
+import com.progressoft.progressofttest.dto.ExchangeDealRequestDto;
+import com.progressoft.progressofttest.dto.ExchangeDealResponseDto;
+import com.progressoft.progressofttest.entity.ExchangeDeal;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

@@ -8,30 +8,19 @@
         <version>3.4.2</version>
         <relativePath/>
     </parent>
-    <groupId>com.progresoft</groupId>
-    <artifactId>progresoft-test</artifactId>
+    <groupId>com.progressoft</groupId>
+    <artifactId>progressoft-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>progresoft-test</name>
-    <description>progresoft-test</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+    <name>progressoft-test</name>
+    <description>progressoft-test</description>
+
     <properties>
         <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <org.mapstruct.version>1.6.2</org.mapstruct.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

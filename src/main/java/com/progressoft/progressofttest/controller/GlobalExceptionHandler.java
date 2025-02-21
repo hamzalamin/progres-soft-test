@@ -1,8 +1,8 @@
-package com.progresoft.progresofttest.controller;
+package com.progressoft.progressofttest.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
-import com.progresoft.progresofttest.Exception.ErrorResponse;
+import com.progressoft.progressofttest.Exception.ErrorResponse;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

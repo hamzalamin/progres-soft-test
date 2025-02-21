@@ -1,4 +1,4 @@
-package com.progresoft.progresofttest.Exception;
+package com.progressoft.progressofttest.Exception;
 
 import java.time.LocalDateTime;
 

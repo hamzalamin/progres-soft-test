@@ -1,4 +1,4 @@
-package com.progresoft.progresofttest.dto;
+package com.progressoft.progressofttest.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Currency;
 
-public record ExchangeDealResponseDto(
+public record ExchangeDealRequestDto(
         @NotBlank String id,
         @NotNull Currency fromCurrency,
         @NotNull Currency toCurrency,

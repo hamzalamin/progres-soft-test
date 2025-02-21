@@ -1,10 +1,10 @@
-package com.progresoft.progresofttest;
+package com.progressoft.progressofttest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProgresoftTestApplicationTests {
+class ProgressoftTestApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,4 +1,4 @@
-package com.progresoft.progresofttest.Exception;
+package com.progressoft.progressofttest.Exception;
 
 public class SameCurrencyException extends RuntimeException {
     public SameCurrencyException(String message) {

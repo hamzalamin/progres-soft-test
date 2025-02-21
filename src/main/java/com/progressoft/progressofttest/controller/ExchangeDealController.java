@@ -1,8 +1,8 @@
-package com.progresoft.progresofttest.controller;
+package com.progressoft.progressofttest.controller;
 
-import com.progresoft.progresofttest.dto.ExchangeDealRequestDto;
-import com.progresoft.progresofttest.dto.ExchangeDealResponseDto;
-import com.progresoft.progresofttest.service.IExchangeDealService;
+import com.progressoft.progressofttest.dto.ExchangeDealRequestDto;
+import com.progressoft.progressofttest.dto.ExchangeDealResponseDto;
+import com.progressoft.progressofttest.service.ExchangeDealService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/v1/deals")
 @RequiredArgsConstructor
 public class ExchangeDealController {
-    private final IExchangeDealService exchangeDealService;
+    private final ExchangeDealService exchangeDealService;
 
     @PostMapping
     public ResponseEntity<ExchangeDealResponseDto> save(@RequestBody @Valid ExchangeDealRequestDto dto){
