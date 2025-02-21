@@ -40,7 +40,7 @@ public class ExchangeDealServiceImpl implements ExchangeDealService {
     }
 
     private static void validateCurrency(ExchangeDealRequestDto dto) {
-        if (dto.fromCurrency() == dto.toCurrency()){
+        if (dto.fromCurrency().equals(dto.toCurrency())){
             log.warn("From currency and to currency cannot be the same for deal ID");
             throw new SameCurrencyException("From currency and to currency cannot be the same for deal ID");
         }
