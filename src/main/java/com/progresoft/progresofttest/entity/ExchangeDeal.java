@@ -3,6 +3,7 @@ package com.progresoft.progresofttest.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -11,13 +12,14 @@ import java.time.LocalDateTime;
 import java.util.Currency;
 
 @Entity
-@Table(name = "deals")
+@Table(name = "exchange_deals")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Deal {
+public class ExchangeDeal {
     @Id
+    @NotBlank
     private String id;
 
     @NotNull
@@ -27,8 +29,8 @@ public class Deal {
     private Currency toCurrency;
 
     @NotNull
-    private LocalDateTime dealTimestamp;
+    private LocalDateTime timestamp;
 
     @NotNull
-    private BigDecimal dealAmount;
+    private BigDecimal amount;
 }
