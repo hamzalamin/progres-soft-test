@@ -1,0 +1,35 @@
+package com.progresoft.progresofttest.service;
+
+import com.progresoft.progresofttest.Exception.DuplicateIdException;
+import com.progresoft.progresofttest.dto.ExchangeDealRequestDto;
+import com.progresoft.progresofttest.dto.ExchangeDealResponseDto;
+import com.progresoft.progresofttest.entity.ExchangeDeal;
+import com.progresoft.progresofttest.mapper.ExchangeDealMapper;
+import com.progresoft.progresofttest.repository.ExchangeDealRepository;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+@Service
+@RequiredArgsConstructor
+@Slf4j
+public class ExchangeDealServiceImpl implements IExchangeDealService {
+
+    private final ExchangeDealRepository repository;
+    private final ExchangeDealMapper mapper;
+
+    @Override
+    public ExchangeDealResponseDto save(ExchangeDealRequestDto dto) {
+        log.info("Saving deal with ID {} in progress..", dto.id());
+
+        if (repository.existsById(dto.id())){
+            log.warn("Deal with ID {} already exists. Aborting operation.", dto.id());
+            throw new DuplicateIdException(dto.id());
+        }
+
+        ExchangeDeal savedExchangeDeal = repository.save(mapper.toEntity(dto));
+        log.info("Deal with ID {} saved successfully.", savedExchangeDeal.getId());
+
+        return mapper.toDto(savedExchangeDeal);
+    }
+}
